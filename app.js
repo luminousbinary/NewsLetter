@@ -3,7 +3,7 @@ const bodyParser = require("body-parser")
 const request = require("request")
 const path = require("path")
 
-const port = 3000;
+const port = 5001;
 const app = express();
 
 app.use(express.static(path.join(__dirname, "/public")));
@@ -75,7 +75,7 @@ app.post("/failure", (req,res)=>{
 })
 
 
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
     console.log("Your app is running on")
 })
 
